@@ -1,0 +1,15 @@
+<h1>Search Page</h1>
+<% counter = 1 %>
+<% facade.search_results.each do |search_result| %>
+<section id="result-<%= counter %>">
+  ID: <%= search_result.name %>
+  <br>
+  URL: <%= link_to search_result.url, search_result.url %>
+  <br>
+  <img src=<%= search_result.url %>
+  <br>
+  <br>
+  <br>
+</section>
+<% counter += 1 %>
+<% end %>
